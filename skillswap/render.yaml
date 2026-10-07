@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: skillswap
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn skillswap.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: skillswap.settings
